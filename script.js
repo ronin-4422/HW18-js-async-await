@@ -35,11 +35,14 @@ async function getUserAdditionalInfo() {
   let result4 = await promise4;
   console.log(result4)
 }
+async function getResult() { 
+  await delay();
+  await getUserInfo();
+  await getUserAvatar();
+  await getUserAdditionalInfo();
+  }
+  getResult();
 
-delay();
-getUserInfo();
-getUserAvatar();
-getUserAdditionalInfo();
 
 console.log("----------------Task 5")
 async function getUser() {
